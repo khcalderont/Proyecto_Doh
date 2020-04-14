@@ -423,10 +423,21 @@
 					<div class="col-md-4 col-xs-6">
 						<div class="shop">
 							<div class="shop-img">
-								<img src="./img/shop01.png" alt="">
+								<img src="./img/abono.jpeg" alt="">
 							</div>
 							<div class="shop-body">
-								<h3>Nombre<br>Categoria</h3>
+								<h3>Categoria  <br> Abonos</h3>
+								<a href="#" class="cta-btn">Productos <i class="fa fa-arrow-circle-right"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-xs-6">
+						<div class="shop">
+							<div class="shop-img">
+								<img src="./img/insecticidas.jpg" alt="">
+							</div>
+							<div class="shop-body">
+								<h3>Categoria <br>Insecticidas</h3>
 								<a href="#" class="cta-btn">Productos<i class="fa fa-arrow-circle-right"></i></a>
 							</div>
 						</div>
@@ -434,55 +445,11 @@
 					<div class="col-md-4 col-xs-6">
 						<div class="shop">
 							<div class="shop-img">
-								<img src="./img/shop03.png" alt="">
+								<img src="./img/semillas.jpg" alt="">
 							</div>
 							<div class="shop-body">
-								<h3>Nombre<br>Categoria</h3>
-								<a href="#" class="cta-btn">Productos<i class="fa fa-arrow-circle-right"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-xs-6">
-						<div class="shop">
-							<div class="shop-img">
-								<img src="./img/shop02.png" alt="">
-							</div>
-							<div class="shop-body">
-								<h3>Nombre<br>Categoria</h3>
-								<a href="#" class="cta-btn">Productos<i class="fa fa-arrow-circle-right"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-xs-6">
-						<div class="shop">
-							<div class="shop-img">
-								<img src="./img/shop01.png" alt="">
-							</div>
-							<div class="shop-body">
-								<h3>Nombre<br>Categoria</h3>
-								<a href="#" class="cta-btn">Productos<i class="fa fa-arrow-circle-right"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-xs-6">
-						<div class="shop">
-							<div class="shop-img">
-								<img src="./img/shop03.png" alt="">
-							</div>
-							<div class="shop-body">
-								<h3>Nombre<br>Categoria</h3>
-								<a href="#" class="cta-btn">Productos<i class="fa fa-arrow-circle-right"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-xs-6">
-						<div class="shop">
-							<div class="shop-img">
-								<img src="./img/shop02.png" alt="">
-							</div>
-							<div class="shop-body">
-								<h3>Nombre<br>Categoria</h3>
-								<a href="#" class="cta-btn">Productos<i class="fa fa-arrow-circle-right"></i></a>
+								<h3>Categoria <br>Semillas</h3>
+								<a href="#" class="cta-btn">Productos <i class="fa fa-arrow-circle-right"></i></a>
 							</div>
 						</div>
 					</div>
@@ -497,12 +464,176 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="section-title">
-							<h3 class="title">Productos mas vendidos</h3>
+							<h3 class="title"><strong>Nuevos productos</strong></h3>
 							<div class="section-nav">
 								<ul class="section-tab-nav tab-nav">
-									<li class="active"><a data-toggle="tab" href="#tab2">Medicamentos</a></li>
-									<li><a data-toggle="tab" href="#tab2">Celulares</a></li>
-									<li><a data-toggle="tab" href="#tab2">Lenceria</a></li>
+									<li class="active"><a data-toggle="tab" href="#tab1">Todos</a></li>
+									<li><a data-toggle="tab" href="#tab1">Insecticidas</a></li>
+									<li><a data-toggle="tab" href="#tab1">Abonos</a></li>
+									<li><a data-toggle="tab" href="#tab1">Semillas</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="row">
+							<div class="products-tabs">
+								<div id="tab1" class="tab-pane active">
+									<div class="products-slick" data-nav="#slick-nav-1">
+										<div class="product">
+											<div class="product-img">
+												<img src="./img/nuevo1.jpeg" alt="" style="width:105%">
+												<div class="product-label">
+													<span class="sale">-30%</span>
+													<span class="new">NEW</span>
+												</div>
+											</div>
+											<div class="product-body">
+												<p class="product-category">Categoria</p>
+												<h3 class="product-name"><a href="#">Panela</a></h3>
+												<h4 class="product-price">$980.000<del class="product-old-price">$990.000</del></h4>
+												<div class="product-rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+												</div>
+												<div class="product-btns">
+													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a favorito</span></button>
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">Comparar</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Mas info</span></button>
+												</div>
+											</div>
+											<div class="add-to-cart">
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Agregar a Carrito</button>
+											</div>
+										</div>
+										<div class="product">
+											<div class="product-img">
+												<img src="./img/nuevo2.jpg" alt="">
+												<div class="product-label">
+													<span class="new">NEW</span>
+												</div>
+											</div>
+											<div class="product-body">
+												<p class="product-category">Categoria</p>
+												<h3 class="product-name"><a href="#">El Cacao</a></h3>
+												<h4 class="product-price">$980.000<del class="product-old-price">$990.000</del></h4>
+												<div class="product-rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star-o"></i>
+												</div>
+												<div class="product-btns">
+													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a favorito</span></button>
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">Comparar</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Mas info</span></button>
+												</div>
+											</div>
+											<div class="add-to-cart">
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Agregar a carrito</button>
+											</div>
+										</div>
+										<div class="product">
+											<div class="product-img">
+												<img src="./img/nuevo3.jpg" alt="" style="width:112%">
+												<div class="product-label">
+													<span class="sale">-30%</span>
+												</div>
+											</div>
+											<div class="product-body">
+												<p class="product-category">Categoria</p>
+												<h3 class="product-name"><a href="#">Jacobs</a></h3>
+												<h4 class="product-price">$980.000<del class="product-old-price">$990.000</del></h4>
+												<div class="product-rating">
+												</div>
+												<div class="product-btns">
+													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a favorito</span></button>
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">Comparar</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Mas info</span></button>
+												</div>
+											</div>
+											<div class="add-to-cart">
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Agregar a carrito</button>
+											</div>
+										</div>
+										<div class="product">
+											<div class="product-img">
+												<img src="./img/nuevo4.jpg" alt="" style="width:100%; padding-left: 30px">
+											</div>
+											<div class="product-body">
+												<p class="product-category">Categoria</p>
+												<h3 class="product-name"><a href="#">Cholupa</a></h3>
+												<h4 class="product-price">$980.000<del class="product-old-price">$990.000</del></h4>
+												<div class="product-rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+												</div>
+												<div class="product-btns">
+													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a favorito</span></button>
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">Comparar</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Mas info</span></button>
+												</div>
+											</div>
+											<div class="add-to-cart">
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Agregar a carrito</button>
+											</div>
+										</div>
+										<div class="product">
+											<div class="product-img">
+												<img src="./img/nuevo.jpg" alt="" style="width:90%">
+											</div>
+											<div class="product-body">
+												<p class="product-category">Categoria</p>
+												<h3 class="product-name"><a href="#">Nescafé</a></h3>
+												<h4 class="product-price">$980.000<del class="product-old-price">$990.000</del></h4>
+												<div class="product-rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+												</div>
+												<div class="product-btns">
+													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a favorito</span></button>
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">Comparar</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Mas info</span></button>
+												</div>
+											</div>
+											<div class="add-to-cart">
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Agregar a carrito</button>
+											</div>
+										</div>
+									</div>
+									<div id="slick-nav-1" class="products-slick-nav"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /SECTION -->
+		
+		<!-- SECTION -->
+		<div class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="section-title">
+							<h3 class="title"><strong>Productos mas vendidos</strong></h3>
+							<div class="section-nav">
+								<ul class="section-tab-nav tab-nav">
+									<li class="active"><a data-toggle="tab" href="#tab2">Todos</a></li>
+									<li><a data-toggle="tab" href="#tab2">Insecticidas</a></li>
+									<li><a data-toggle="tab" href="#tab2">Abonos</a></li>
+									<li><a data-toggle="tab" href="#tab2">Semillas</a></li>
 								</ul>
 							</div>
 						</div>
@@ -514,7 +645,7 @@
 									<div class="products-slick" data-nav="#slick-nav-2">
 										<div class="product">
 											<div class="product-img">
-												<img src="./img/product06.png" alt="">
+												<img src="./img/vendido.jpg" alt="">
 												<div class="product-label">
 													<span class="sale">-30%</span>
 													<span class="new">NEW</span>
@@ -543,7 +674,7 @@
 										</div>
 										<div class="product">
 											<div class="product-img">
-												<img src="./img/product07.png" alt="">
+												<img src="./img/product11.jpg" alt="">
 												<div class="product-label">
 													<span class="new">NEW</span>
 												</div>
@@ -594,7 +725,7 @@
 										</div>
 										<div class="product">
 											<div class="product-img">
-												<img src="./img/product09.png" alt="">
+												<img src="./img/semillas.jpg" alt="">
 											</div>
 											<div class="product-body">
 												<p class="product-category">Categoria</p>
@@ -619,7 +750,7 @@
 										</div>
 										<div class="product">
 											<div class="product-img">
-												<img src="./img/product01.png" alt="">
+												<img src="./img/nuevo1.jpeg" alt="">
 											</div>
 											<div class="product-body">
 												<p class="product-category">Categoria</p>
@@ -653,171 +784,7 @@
 		</div>
 		<!-- /SECTION -->
 
-		<!-- SECTION -->
-		<div class="section">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="section-title">
-							<h3 class="title">Nuevos productos</h3>
-							<div class="section-nav">
-								<ul class="section-tab-nav tab-nav">
-									<li class="active"><a data-toggle="tab" href="#tab1">Medicamentos</a></li>
-									<li><a data-toggle="tab" href="#tab1">Lenceria</a></li>
-									<li><a data-toggle="tab" href="#tab1">Electrodomesticos</a></li>
-									<li><a data-toggle="tab" href="#tab1">Celulares</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-12">
-						<div class="row">
-							<div class="products-tabs">
-								<div id="tab1" class="tab-pane active">
-									<div class="products-slick" data-nav="#slick-nav-1">
-										<div class="product">
-											<div class="product-img">
-												<img src="./img/product01.png" alt="">
-												<div class="product-label">
-													<span class="sale">-30%</span>
-													<span class="new">NEW</span>
-												</div>
-											</div>
-											<div class="product-body">
-												<p class="product-category">Categoria</p>
-												<h3 class="product-name"><a href="#">Nombre producto</a></h3>
-												<h4 class="product-price">$980.000<del class="product-old-price">$990.000</del></h4>
-												<div class="product-rating">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-												</div>
-												<div class="product-btns">
-													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a favorito</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">Comparar</span></button>
-													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Mas info</span></button>
-												</div>
-											</div>
-											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Agregar a Carrito</button>
-											</div>
-										</div>
-										<div class="product">
-											<div class="product-img">
-												<img src="./img/product02.png" alt="">
-												<div class="product-label">
-													<span class="new">NEW</span>
-												</div>
-											</div>
-											<div class="product-body">
-												<p class="product-category">Categoria</p>
-												<h3 class="product-name"><a href="#">Nombre producto</a></h3>
-												<h4 class="product-price">$980.000<del class="product-old-price">$990.000</del></h4>
-												<div class="product-rating">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>
-												</div>
-												<div class="product-btns">
-													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a favorito</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">Comparar</span></button>
-													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Mas info</span></button>
-												</div>
-											</div>
-											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Agregar a carrito</button>
-											</div>
-										</div>
-										<div class="product">
-											<div class="product-img">
-												<img src="./img/product03.png" alt="">
-												<div class="product-label">
-													<span class="sale">-30%</span>
-												</div>
-											</div>
-											<div class="product-body">
-												<p class="product-category">Categoria</p>
-												<h3 class="product-name"><a href="#">Nombre producto</a></h3>
-												<h4 class="product-price">$980.000<del class="product-old-price">$990.000</del></h4>
-												<div class="product-rating">
-												</div>
-												<div class="product-btns">
-													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a favorito</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">Comparar</span></button>
-													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Mas info</span></button>
-												</div>
-											</div>
-											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Agregar a carrito</button>
-											</div>
-										</div>
-										<div class="product">
-											<div class="product-img">
-												<img src="./img/product04.png" alt="">
-											</div>
-											<div class="product-body">
-												<p class="product-category">Categoria</p>
-												<h3 class="product-name"><a href="#">Nombre producto</a></h3>
-												<h4 class="product-price">$980.000<del class="product-old-price">$990.000</del></h4>
-												<div class="product-rating">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-												</div>
-												<div class="product-btns">
-													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a favorito</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">Comparar</span></button>
-													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Mas info</span></button>
-												</div>
-											</div>
-											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Agregar a carrito</button>
-											</div>
-										</div>
-										<div class="product">
-											<div class="product-img">
-												<img src="./img/product05.png" alt="">
-											</div>
-											<div class="product-body">
-												<p class="product-category">Categoria</p>
-												<h3 class="product-name"><a href="#">Nombre producto</a></h3>
-												<h4 class="product-price">$980.000<del class="product-old-price">$990.000</del></h4>
-												<div class="product-rating">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-												</div>
-												<div class="product-btns">
-													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a favorito</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">Comparar</span></button>
-													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Mas info</span></button>
-												</div>
-											</div>
-											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Agregar a carrito</button>
-											</div>
-										</div>
-									</div>
-									<div id="slick-nav-1" class="products-slick-nav"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /SECTION -->
-		
-		
-		<!-- HOT DEAL SECTION -->
+		<!-- HOT DEAL SECTION 
 		<div id="hot-deal2" class="section2">
 			<div class="container">
 				<div class="row">
@@ -856,7 +823,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div>  -->
 		<!-- /HOT DEAL SECTION -->
 
 		<!-- SECTION -->
@@ -865,7 +832,7 @@
 				<div class="row">
 					<div class="col-md-4 col-xs-6">
 						<div class="section-title">
-							<h4 class="title">Productos</h4>
+							<h4 class="title">PRODUCTOS</h4>
 							<div class="section-nav">
 								<div id="slick-nav-3" class="products-slick-nav"></div>
 							</div>
@@ -874,11 +841,11 @@
 							<div>
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="./img/product07.png" alt="">
+										<img src="./img/product07.jpg" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="#">product name goes here</a></h3>
+										<p class="product-category">PISCICULTURA</p>
+										<h3 class="product-name"><a href="#">PECES</a></h3>
 										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 									</div>
 								</div>
@@ -887,18 +854,18 @@
 										<img src="./img/product08.png" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="#">product name goes here</a></h3>
+										<p class="product-category">CHOLUPA</p>
+										<h3 class="product-name"><a href="#">CHOLUPA</a></h3>
 										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 									</div>
 								</div>
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="./img/product09.png" alt="">
+										<img src="./img/product09.jpg" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="#">product name goes here</a></h3>
+										<p class="product-category">CAFE</p>
+										<h3 class="product-name"><a href="#">CAFE EXPRESS</a></h3>
 										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 									</div>
 								</div>
@@ -909,18 +876,18 @@
 										<img src="./img/product01.png" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="#">product name goes here</a></h3>
+										<p class="product-category">PANELA</p>
+										<h3 class="product-name"><a href="#">PANELA </a></h3>
 										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 									</div>
 								</div>
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="./img/product02.png" alt="">
+										<img src="./img/product02.jpg" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="#">product name goes here</a></h3>
+										<p class="product-category">OVINOS</p>
+										<h3 class="product-name"><a href="#">OVEJAS </a></h3>
 										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 									</div>
 								</div>
@@ -929,8 +896,8 @@
 										<img src="./img/product03.png" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="#">product name goes here</a></h3>
+										<p class="product-category">GANADERIA</p>
+										<h3 class="product-name"><a href="#">VACA</a></h3>
 										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 									</div>
 								</div>
@@ -939,7 +906,7 @@
 					</div>
 					<div class="col-md-4 col-xs-6">
 						<div class="section-title">
-							<h4 class="title">Top selling</h4>
+							<h4 class="title">PRIDUCTOS</h4>
 							<div class="section-nav">
 								<div id="slick-nav-4" class="products-slick-nav"></div>
 							</div>
@@ -948,21 +915,21 @@
 							<div>
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="./img/product04.png" alt="">
+										<img src="./img/product04.jpg" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="#">product name goes here</a></h3>
+										<p class="product-category">CACAO</p>
+										<h3 class="product-name"><a href="#">CACAO</a></h3>
 										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 									</div>
 								</div>
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="./img/product05.png" alt="">
+										<img src="./img/product05.webp" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="#">product name goes here</a></h3>
+										<p class="product-category">PANELA</p>
+										<h3 class="product-name"><a href="#">PANELA</a></h3>
 										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 									</div>
 								</div>
@@ -971,8 +938,8 @@
 										<img src="./img/product06.png" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="#">product name goes here</a></h3>
+										<p class="product-category">CAFE</p>
+										<h3 class="product-name"><a href="#">CAFE</a></h3>
 										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 									</div>
 								</div>
@@ -980,11 +947,11 @@
 							<div>
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="./img/product07.png" alt="">
+										<img src="./img/product07.jpg" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="#">product name goes here</a></h3>
+										<p class="product-category">PISCICULTURA</p>
+										<h3 class="product-name"><a href="#">PECES</a></h3>
 										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 									</div>
 								</div>
@@ -993,18 +960,18 @@
 										<img src="./img/product08.png" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="#">product name goes here</a></h3>
+										<p class="product-category">CHOLUPA</p>
+										<h3 class="product-name"><a href="#">CHOLUPA</a></h3>
 										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 									</div>
 								</div>
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="./img/product09.png" alt="">
+										<img src="./img/product09.jpg" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="#">product name goes here</a></h3>
+										<p class="product-category">CAFE</p>
+										<h3 class="product-name"><a href="#">CAFE</a></h3>
 										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 									</div>
 								</div>
@@ -1014,7 +981,7 @@
 					<div class="clearfix visible-sm visible-xs"></div>
 					<div class="col-md-4 col-xs-6">
 						<div class="section-title">
-							<h4 class="title">Top selling</h4>
+							<h4 class="title">PRODUCTOS</h4>
 							<div class="section-nav">
 								<div id="slick-nav-5" class="products-slick-nav"></div>
 							</div>
@@ -1026,18 +993,18 @@
 										<img src="./img/product01.png" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="#">product name goes here</a></h3>
+										<p class="product-category">PANELA</p>
+										<h3 class="product-name"><a href="#">PANELA</a></h3>
 										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 									</div>
 								</div>
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="./img/product02.png" alt="">
+										<img src="./img/product12.jpg" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="#">product name goes here</a></h3>
+										<p class="product-category">ARTESANIA</p>
+										<h3 class="product-name"><a href="#">ESTATUAS</a></h3>
 										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 									</div>
 								</div>
@@ -1046,8 +1013,8 @@
 										<img src="./img/product03.png" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="#">product name goes here</a></h3>
+										<p class="product-category">GANADERIA</p>
+										<h3 class="product-name"><a href="#">GANADERIA</a></h3>
 										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 									</div>
 								</div>
@@ -1055,31 +1022,31 @@
 							<div>
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="./img/product04.png" alt="">
+										<img src="./img/product11.jpg" alt="" style="width: 110%">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="#">product name goes here</a></h3>
+										<p class="product-category">ARTESANIA</p>
+										<h3 class="product-name"><a href="#">CHIVA</a></h3>
 										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 									</div>
 								</div>
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="./img/product05.png" alt="">
+										<img src="./img/product05.webp" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="#">product name goes here</a></h3>
+										<p class="product-category">PANELA</p>
+										<h3 class="product-name"><a href="#">PANELA</a></h3>
 										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 									</div>
 								</div>
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="./img/product06.png" alt="">
+										<img src="./img/product10.jpg" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="#">product name goes here</a></h3>
+										<p class="product-category">ATESANIAS</p>
+										<h3 class="product-name"><a href="#">SOMBRERO</a></h3>
 										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 									</div>
 								</div>
@@ -1090,6 +1057,53 @@
 			</div>
 		</div>
 		<!-- /SECTION -->
+
+		
+
+
+		<div class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-xs-6">
+						<div class="logos">
+							<div class="shop-img">
+								<img src="./img/ghuila.png" alt="" style="width: 60%">
+							</div>
+							<div class="shop-body">
+								
+								<a href="#" class="cta-btn"><i class="fa fa-arrow-circle-right"></i></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4 col-xs-6">
+						<div class="logos">
+							<div class="shop-img">
+								<img src="./img/ccneiva.png" alt="" style="width: 60%">
+							</div>
+							<div class="shop-body">
+								
+								<a href="#" class="cta-btn"><i class="fa fa-arrow-circle-right"></i></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4 col-xs-6">
+						<div class="logos">
+							<div class="shop-img">
+								<img src="./img/hcrece.jpeg" alt="" style="width: 60%">
+							</div>
+							<div class="shop-body">
+								
+								<a href="#" class="cta-btn"><i class="fa fa-arrow-circle-right"></i></a>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
 
 		<!-- NEWSLETTER -->
 		<div id="newsletter" class="section">
