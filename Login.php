@@ -2,76 +2,43 @@
 
 require 'funcs/conexion.php';
 require 'funcs/funcs.php';
+session_start();
 
 $errors = array();
 
-if (!empty($_POST)) {
+if (!empty($_POST)) { // Si se da click en el botón Ingresar
 
-	$usuario = $_POST['usuario'];
-	$password = $_POST['password'];
-	
+	if (empty($_POST['usuario']) || empty($_POST['password'])) {
+		//Si alguno de los campos está en blanco...
+		?>
+		<script type="text/javascript"> window.alert("Campos obligatorios!!")</script>
+		<?php
+	}else{
+		$sql= "SELECT * FROM `reg_usuario` WHERE correoUsu=:user AND claveUsu=:pass";
+		$result= $base-> prepare($sql);
+		$result-> execute(array(":user"=>$_POST['usuario'], ":pass"=>$_POST{'password'}));
 
-	if (isNull($usuario, $password )) {
-		
-		$errors[] = "Debe llenar todos los campos";
-	}
+		while ($consulta=$result->fetch(PDO::FETCH_ASSOC)){
+			$_SESSION['usuario']=$consulta['nombreUsu'];// Se crea una variable de sesión a la que se le asigna el nombre "usuario"
+			$_SESSION['apellido']=$consulta['priApellidoUsu'];
+		}
+		$verificar=$result->rowCount(); // Retorna un número diferente a 0 si la sentencia se ha ejecutado correctamente y lo almacena en $contador...
 
-	if (!isEmail($email)) {
-	
-		$errors[] = "Dirección de correo invalida ";
-
-	}
-
-	if (!validaPassword($pass1, $pass2)) {
-	
-		$errors[] = "Las contraseñas no coinciden ";
-
-	}
-
-
-	if (usuarioExiste($numerodoc)) {
-		
-		$errors[] = "El usuario con numero de documento $numerodoc ya existe";
-	}
-
-	if (emailExiste($email)) {
-		
-		$errors[] = "El correo registrado $email ya existe";
-	}
-	
-
-
-
-	if (count($errors) ==0) {
-		
-		$pass_hash = hashPassword($pass1);
-		
-		$token = generateToken();
-
-		$registro = registraUsuario($nombre, $papellido, $sapellido, $telefono, $departamento, $ciudad, $direccion, $indicativo, $tipo, $numerodoc, $email, $pass_hash, $activo, $token, $tipo_usuario, $pais);
-
-
-
+			if ($verificar > 0) { // Es > a 0 si se ha ejecutado la sentecia correctamente 
+				header("location:registrados.php");
+			}else{
+				// Si es <= 0 quiere decir que la sentencia no se ejecutó...
+				?>
+				<script type="text/javascript"> window.alert("Datos Erróneos!!")</script>
+			<?php
+			
+		}
 		}
 
-
-
 	}
-
-	
-	
-
-
-
-
 
 
 ?>
-
-
-
-
-
 
 
 
@@ -201,7 +168,7 @@ if (!empty($_POST)) {
 						<center><div>
 							<div class="billing-details">
 							<div class="section-title">
-								<h3 class="title" style="color: black; font-size: 27px; ">FORMULARIO DE INGRESO</h3>
+							<h2 style="color: #fd6500;"><strong>FROMULARIO DE INGRESO</strong></h2>
 							</div>
 							<br>
 							<br>
@@ -209,20 +176,15 @@ if (!empty($_POST)) {
 								
 								<tr>
 									
-									<td><input type="email" name="usuario" class="input" placeholder="Correo electronico" style="width: 50%" ></td><br><br>
-									<td><input type="text" name="password" class="input" placeholder="Contraseña" style="width: 50%" ></td><br><br>
+									<td><input type="email" name="usuario" class="input" placeholder="Correo electronico" style="width: 35%" ></td><br><br>
+									<td><input type="password" name="password" class="input" placeholder="Contraseña" style="width: 35%" ></td><br><br>
 									
 								</tr>
 
-								
-								
-								
-
-								
 								<br>
 								<br>
 								<tr>
-									<td><b><input class="input" type="submit" name="btn" value="INGRESAR" style="background-color: #dc6414; color: white; border-radius: 10px; width: 300px; height: 60px; font-size: 20px; border-color: #dc6414"></b></td>
+									<td><b><input class="input" type="submit" name="btn" value="INGRESAR" style="background-color: #dc6414; color: white; border-radius: 10px; width: 200px; height: 50px; font-size: 20px; border-color: #dc6414"></b></td>
 									
 								</tr>
 								

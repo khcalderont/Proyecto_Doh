@@ -25,9 +25,22 @@
 
 		<!-- Custom stlylesheet -->
 		<link type="text/css" rel="stylesheet" href="css/style.css"/>
-    </head>
-	<body>
+	</head>
 
+	<?php
+require 'funcs/conexion.php'; // Conexión a la BD
+session_start();
+
+if(isset($_SESSION['usuario']) and isset($_SESSION['apellido'])){
+	$usuario=$_SESSION['usuario'];
+	$apellido=$_SESSION['apellido'];
+} else{
+	$usuario="";
+	$apellido="";
+}
+?>
+
+	<body>
 		<!-- HEADER -->
 		<header>
 			<div id="header">
@@ -53,12 +66,25 @@
 								<div class="dropdown">
 									<a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
 										<i class="fa fa-user-circle-o"></i>
-										<span>Ingresar</span>
+										<span>
+											<?php
+												if($usuario==""){
+													echo"<script> window.location='login.php' </script>";
+												} else{
+													echo  $_SESSION['usuario']. " ". $_SESSION['apellido'];
+										
+												}
+											?>
+										</span>
 									</a>
 									<div class="cart-dropdown2">
 										<ul class="custom-menu2">
-											<li><a href="Rempresa.php"><i class="fa fa-building"></i>Empresa</a></li>
-											<li><a href="Rusuario.php"><i class="fa fa-user-plus"></i>usuario</a></li>
+											<li><a href="#"><i class="fa fa-user-o"></i> Mi cuenta</a></li>
+											<li><a href="#"><i class="fa fa-heart-o"></i>Favoritos</a></li>
+											<li><a href="#"><i class="fa fa-exchange"></i> Comparar</a></li>
+											<li><a href="#"><i class="fa fa-check"></i> Compra</a></li>
+											<li><a href="#"><i class="fa fa-unlock-alt"></i>Login</a></li>
+											<li><a href="salir.php"><i class="fa fa-power-off"></i>Cerrar Sesión</a></li>
 										</ul>
 									</div>
 								</div>
@@ -405,8 +431,8 @@
 					<div class="col-md-12">
 						<div class="hot-deal">
 							<div class="cen_con">
-								<h2 class="text-uppercase">Del Huila para Colombia</h2>
-								<p>Los mejores productos del Huila</p>
+								<h2 class="text-uppercase">Special offer</h2>
+								<p>New Collection Up to 50% OFF</p>
 								<a class="primary-btn cta-btn" href="#">Productos</a>
 							</div>
 						</div>
@@ -483,168 +509,6 @@
 							<div class="shop-body">
 								<h3>Nombre<br>Categoria</h3>
 								<a href="#" class="cta-btn">Productos<i class="fa fa-arrow-circle-right"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /SECTION -->
-
-		<!-- SECTION -->
-		<div class="section">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="section-title">
-							<h3 class="title">Productos mas vendidos</h3>
-							<div class="section-nav">
-								<ul class="section-tab-nav tab-nav">
-									<li class="active"><a data-toggle="tab" href="#tab2">Medicamentos</a></li>
-									<li><a data-toggle="tab" href="#tab2">Celulares</a></li>
-									<li><a data-toggle="tab" href="#tab2">Lenceria</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-12">
-						<div class="row">
-							<div class="products-tabs">
-								<div id="tab2" class="tab-pane fade in active">
-									<div class="products-slick" data-nav="#slick-nav-2">
-										<div class="product">
-											<div class="product-img">
-												<img src="./img/product06.png" alt="">
-												<div class="product-label">
-													<span class="sale">-30%</span>
-													<span class="new">NEW</span>
-												</div>
-											</div>
-											<div class="product-body">
-												<p class="product-category">Categoria</p>
-												<h3 class="product-name"><a href="#">Nombre producto</a></h3>
-												<h4 class="product-price">$980.000<del class="product-old-price">$990.000</del></h4>
-												<div class="product-rating">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-												</div>
-												<div class="product-btns">
-													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a favoritos</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">Comparar</span></button>
-													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Mas info</span></button>
-												</div>
-											</div>
-											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Agregar a carrito</button>
-											</div>
-										</div>
-										<div class="product">
-											<div class="product-img">
-												<img src="./img/product07.png" alt="">
-												<div class="product-label">
-													<span class="new">NEW</span>
-												</div>
-											</div>
-											<div class="product-body">
-												<p class="product-category">Categoria</p>
-												<h3 class="product-name"><a href="#">Nombre producto</a></h3>
-												<h4 class="product-price">$980.000<del class="product-old-price">$990.000</del></h4>
-												<div class="product-rating">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>
-												</div>
-												<div class="product-btns">
-													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a favorito</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">Comparar</span></button>
-													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Mas info</span></button>
-												</div>
-											</div>
-											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Agregar a carrito</button>
-											</div>
-										</div>
-										<div class="product">
-											<div class="product-img">
-												<img src="./img/product08.png" alt="">
-												<div class="product-label">
-													<span class="sale">-30%</span>
-												</div>
-											</div>
-											<div class="product-body">
-												<p class="product-category">Categoria</p>
-												<h3 class="product-name"><a href="#">Nombre producto</a></h3>
-												<h4 class="product-price">$980.000<del class="product-old-price">$990.000</del></h4>
-												<div class="product-rating">
-												</div>
-												<div class="product-btns">
-													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a favorito</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">Comparar</span></button>
-													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Mas info</span></button>
-												</div>
-											</div>
-											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Agregar a carrito</button>
-											</div>
-										</div>
-										<div class="product">
-											<div class="product-img">
-												<img src="./img/product09.png" alt="">
-											</div>
-											<div class="product-body">
-												<p class="product-category">Categoria</p>
-												<h3 class="product-name"><a href="#">Nombre producto</a></h3>
-												<h4 class="product-price">$980.000<del class="product-old-price">$990.000</del></h4>
-												<div class="product-rating">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-												</div>
-												<div class="product-btns">
-													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a favorito</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">comparar</span></button>
-													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Mas info</span></button>
-												</div>
-											</div>
-											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Agregar a carrito</button>
-											</div>
-										</div>
-										<div class="product">
-											<div class="product-img">
-												<img src="./img/product01.png" alt="">
-											</div>
-											<div class="product-body">
-												<p class="product-category">Categoria</p>
-												<h3 class="product-name"><a href="#">Nombre producto</a></h3>
-												<h4 class="product-price">$980.000<del class="product-old-price">$990.000</del></h4>
-												<div class="product-rating">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-												</div>
-												<div class="product-btns">
-													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a favorito</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">Comparar</span></button>
-													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Mas info</span></button>
-												</div>
-											</div>
-											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Agregar a carrito</button>
-											</div>
-										</div>
-									</div>
-									<div id="slick-nav-2" class="products-slick-nav"></div>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -816,7 +680,168 @@
 		</div>
 		<!-- /SECTION -->
 		
-		
+		<!-- SECTION -->
+		<div class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="section-title">
+							<h3 class="title">Productos mas vendidos</h3>
+							<div class="section-nav">
+								<ul class="section-tab-nav tab-nav">
+									<li class="active"><a data-toggle="tab" href="#tab2">Medicamentos</a></li>
+									<li><a data-toggle="tab" href="#tab2">Celulares</a></li>
+									<li><a data-toggle="tab" href="#tab2">Lenceria</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="row">
+							<div class="products-tabs">
+								<div id="tab2" class="tab-pane fade in active">
+									<div class="products-slick" data-nav="#slick-nav-2">
+										<div class="product">
+											<div class="product-img">
+												<img src="./img/product06.png" alt="">
+												<div class="product-label">
+													<span class="sale">-30%</span>
+													<span class="new">NEW</span>
+												</div>
+											</div>
+											<div class="product-body">
+												<p class="product-category">Categoria</p>
+												<h3 class="product-name"><a href="#">Nombre producto</a></h3>
+												<h4 class="product-price">$980.000<del class="product-old-price">$990.000</del></h4>
+												<div class="product-rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+												</div>
+												<div class="product-btns">
+													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a favoritos</span></button>
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">Comparar</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Mas info</span></button>
+												</div>
+											</div>
+											<div class="add-to-cart">
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Agregar a carrito</button>
+											</div>
+										</div>
+										<div class="product">
+											<div class="product-img">
+												<img src="./img/product07.png" alt="">
+												<div class="product-label">
+													<span class="new">NEW</span>
+												</div>
+											</div>
+											<div class="product-body">
+												<p class="product-category">Categoria</p>
+												<h3 class="product-name"><a href="#">Nombre producto</a></h3>
+												<h4 class="product-price">$980.000<del class="product-old-price">$990.000</del></h4>
+												<div class="product-rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star-o"></i>
+												</div>
+												<div class="product-btns">
+													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a favorito</span></button>
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">Comparar</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Mas info</span></button>
+												</div>
+											</div>
+											<div class="add-to-cart">
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Agregar a carrito</button>
+											</div>
+										</div>
+										<div class="product">
+											<div class="product-img">
+												<img src="./img/product08.png" alt="">
+												<div class="product-label">
+													<span class="sale">-30%</span>
+												</div>
+											</div>
+											<div class="product-body">
+												<p class="product-category">Categoria</p>
+												<h3 class="product-name"><a href="#">Nombre producto</a></h3>
+												<h4 class="product-price">$980.000<del class="product-old-price">$990.000</del></h4>
+												<div class="product-rating">
+												</div>
+												<div class="product-btns">
+													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a favorito</span></button>
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">Comparar</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Mas info</span></button>
+												</div>
+											</div>
+											<div class="add-to-cart">
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Agregar a carrito</button>
+											</div>
+										</div>
+										<div class="product">
+											<div class="product-img">
+												<img src="./img/product09.png" alt="">
+											</div>
+											<div class="product-body">
+												<p class="product-category">Categoria</p>
+												<h3 class="product-name"><a href="#">Nombre producto</a></h3>
+												<h4 class="product-price">$980.000<del class="product-old-price">$990.000</del></h4>
+												<div class="product-rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+												</div>
+												<div class="product-btns">
+													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a favorito</span></button>
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">comparar</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Mas info</span></button>
+												</div>
+											</div>
+											<div class="add-to-cart">
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Agregar a carrito</button>
+											</div>
+										</div>
+										<div class="product">
+											<div class="product-img">
+												<img src="./img/product01.png" alt="">
+											</div>
+											<div class="product-body">
+												<p class="product-category">Categoria</p>
+												<h3 class="product-name"><a href="#">Nombre producto</a></h3>
+												<h4 class="product-price">$980.000<del class="product-old-price">$990.000</del></h4>
+												<div class="product-rating">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+												</div>
+												<div class="product-btns">
+													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">Agregar a favorito</span></button>
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">Comparar</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Mas info</span></button>
+												</div>
+											</div>
+											<div class="add-to-cart">
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Agregar a carrito</button>
+											</div>
+										</div>
+									</div>
+									<div id="slick-nav-2" class="products-slick-nav"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /SECTION -->
+
 		<!-- HOT DEAL SECTION -->
 		<div id="hot-deal2" class="section2">
 			<div class="container">
@@ -1091,6 +1116,43 @@
 		</div>
 		<!-- /SECTION -->
 
+		<div class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-xs-6">
+						<div class="logos">
+							<div class="shop-img">
+								<img src="./img/ghuila.png" alt="" style="width: 60%">
+							</div>
+							<div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-xs-6">
+						<div class="logos">
+							<div class="shop-img">
+								<img src="./img/ccneiva.png" alt="" style="width: 60%">
+							</div>
+							<div>
+							
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-xs-6">
+						<div class="logos">
+							<div class="shop-img">
+								<img src="./img/sena.png" alt="" style="width: 60%">
+							</div>
+							<div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<!-- NEWSLETTER -->
 		<div id="newsletter" class="section">
 			<div class="container">
@@ -1122,6 +1184,8 @@
 			</div>
 		</div>
 		<!-- /NEWSLETTER -->
+
+		
 
 		<!-- FOOTER -->
 		<footer id="footer">

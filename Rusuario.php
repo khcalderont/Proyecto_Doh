@@ -144,12 +144,8 @@ if (!empty($_POST)) {
 									</a>
 									<div class="cart-dropdown2">
 										<ul class="custom-menu2">
-											<li><a href="#"><i class="fa fa-user-o"></i> Mi cuenta</a></li>
-											<li><a href="#"><i class="fa fa-heart-o"></i>Favoritos</a></li>
-											<li><a href="#"><i class="fa fa-exchange"></i> Comparar</a></li>
-											<li><a href="#"><i class="fa fa-check"></i> Compra</a></li>
-											<li><a href="#"><i class="fa fa-unlock-alt"></i>Login</a></li>
-											<li><a href="#"><i class="fa fa-user-plus"></i>Crear cuenta</a></li>
+											<li><a href="Rempresa.php"><i class="fa fa-building"></i>Empresa</a></li>
+											<li><a href="Rusuario.php"><i class="fa fa-user-plus"></i>usuario</a></li>
 										</ul>
 									</div>
 								</div>
@@ -469,7 +465,7 @@ if (!empty($_POST)) {
 						<center><div>
 							<div class="billing-details">
 							<div class="section-title">
-								<h3 class="title" style="color: black; font-size: 27px; ">FORMULARIO DE REGISTRO</h3>
+								<h2 style="color: #fd6500;">REGISTRO DE USUARIO</h2>
 							</div>
 							<br>
 							<br>
