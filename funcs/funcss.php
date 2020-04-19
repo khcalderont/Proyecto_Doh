@@ -1,9 +1,9 @@
 <?php 
 
-	function isNull($txtnome, $txtnomce,$txtpape,$txtsape,$txttele,$txtdep,$txtciud,$txtdirec,$txtcodp,$fileced,$filecamc,$emaile,$txtpass1,$txtpass2,$activo,$tipusu,$pais)
+	function isNull($txtnome, $txtnomce,$txtpape,$txtsape,$txttele,$txtdep,$txtciud,$txtdirec,$txtcodp,$txtced,$filecamc,$emaile,$txtpass1,$txtpass2,$activo,$tipusu,$pais)
 	{
 		if(strlen(trim($txtnome)) < 1 || strlen(trim($txtnomce)) < 1 || strlen(trim($txttele)) < 1 || strlen(trim($txtpape)) < 1 || strlen(trim($txtsape)) < 1 || strlen(trim($txttele)) < 1 ||
-		   strlen(trim($txtdep)) < 1 || strlen(trim($txtciud)) < 1 || strlen(trim($txtdirec)) < 1 || strlen(trim($txtcodp)) < 1 || strlen(trim($fileced)) < 1 || strlen(trim($filecamc)) < 1 || 
+		   strlen(trim($txtdep)) < 1 || strlen(trim($txtciud)) < 1 || strlen(trim($txtdirec)) < 1 || strlen(trim($txtcodp)) < 1 || strlen(trim($txtced)) < 1 || strlen(trim($filecamc)) < 1 || 
 		   strlen(trim($emaile)) < 1 || strlen(trim($txtpass1)) < 1 || strlen(trim($txtpass2)) < 1 || strlen(trim($tipusu)) < 1 || strlen(trim($pais)) < 1)
 		{
 			return true;
@@ -97,7 +97,7 @@
 		}
 	}
 
-	function registraEmpresa($txtnome, $txtnomce,$txtpape,$txtsape,$txttele,$txtdep,$txtciud,$txtdirec,$txtcodp,$fileced,$filecamc,$emaile,$pass_hash,$activo,$tipusu,$pais){
+	function registraEmpresa($txtnome, $txtnomce,$txtpape,$txtsape,$txttele,$txtdep,$txtciud,$txtdirec,$txtcodp,$txtced,$filecamc,$emaile,$pass_hash,$activo,$tipusu,$pais){
 		
 		global $base;
 
@@ -105,12 +105,12 @@
 		$sql="INSERT INTO reg_empresa (`id_empresa`, `nombreEmp`, `nombre_contactoEmp`, `priApellido_contactoEmp`, `segApellido_contactoEmp`, `telefonoEmp`, `departamentoEmp`, `ciudadEmp`, 
 		`direccionEmp`, `codigo_postalEmp`, `documento_cedulaEmp`, `documento_camara_comercioEmp`, `correoEmp`, `claveEmp`, `activacion_cuentaEmp`, `fk_tipoUsuarioEmp`, `fk_nacionalidadEmp`)
 
-			VALUES ('', :txtnome, :txtnomce, :txtpape, :txtsape, :txttele, :txtdep, :txtciud, :txtdirec, :txtcodp, :fileced, :filecamc, :emaile, :pass_hash, :activo, :tipusu, :pais)";
+			VALUES ('', :txtnome, :txtnomce, :txtpape, :txtsape, :txttele, :txtdep, :txtciud, :txtdirec, :txtcodp, :txtced, :filecamc, :emaile, :pass_hash, :activo, :tipusu, :pais)";
 
 	$resultado=$base->prepare($sql);
 
 	$resultado->execute(array(":txtnome"=>$txtnome, ":txtnomce"=>$txtnomce,":txtpape"=>$txtpape, ":txtsape"=>$txtsape, ":txttele"=>$txttele, ":txtdep"=>$txtdep,":txtciud"=>$txtciud, 
-	":txtdirec"=>$txtdirec, ":txtcodp"=>$txtcodp, ":fileced"=>$fileced,":filecamc"=>$filecamc, ":emaile"=>$emaile, ":pass_hash"=>$pass_hash, ":activo"=>$activo, ":tipusu"=>$tipusu, 
+	":txtdirec"=>$txtdirec, ":txtcodp"=>$txtcodp, ":txtced"=>$txtced,":filecamc"=>$filecamc, ":emaile"=>$emaile, ":pass_hash"=>$pass_hash, ":activo"=>$activo, ":tipusu"=>$tipusu, 
 	":pais"=>$pais));
 		?>
   			<script language="javascript">window.alert("Registro Relalizado con éxito");window.location='Login.php'</script>

@@ -25,6 +25,9 @@
 
 		<!-- Custom stlylesheet -->
 		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+
+		<link type="text/css" rel="stylesheet" href="css/flexslider.css"/>
+		<link type="text/css" rel="stylesheet" href="css/styyles.css"/>
 	</head>
 
 	<?php
@@ -67,7 +70,7 @@ if(isset($_SESSION['usuario']) and isset($_SESSION['apellido'])){
 									<a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
 										<i class="fa fa-user-circle-o"></i>
 										<span>
-											<?php
+										<?php
 												if($usuario==""){
 													echo"<script> window.location='login.php' </script>";
 												} else{
@@ -81,10 +84,9 @@ if(isset($_SESSION['usuario']) and isset($_SESSION['apellido'])){
 										<ul class="custom-menu2">
 											<li><a href="#"><i class="fa fa-user-o"></i> Mi cuenta</a></li>
 											<li><a href="#"><i class="fa fa-heart-o"></i>Favoritos</a></li>
-											<li><a href="#"><i class="fa fa-exchange"></i> Comparar</a></li>
-											<li><a href="#"><i class="fa fa-check"></i> Compra</a></li>
-											<li><a href="#"><i class="fa fa-unlock-alt"></i>Login</a></li>
-											<li><a href="salir.php"><i class="fa fa-power-off"></i>Cerrar Sesión</a></li>
+											<li><a href="#"><i class="fa fa-check"></i> Compras</a></li>
+											<li><a href="#"><i class="fa fa-envelope"></i>Mensajes</a></li>
+											<li><a href="SalirE.php"><i class="fa fa-power-off"></i>Cerrar Sesión</a></li>
 										</ul>
 									</div>
 								</div>
@@ -425,20 +427,38 @@ if(isset($_SESSION['usuario']) and isset($_SESSION['apellido'])){
 
 
 		<!-- HOT DEAL SECTION -->
-		<div id="hot-deal" class="section">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="hot-deal">
-							<div class="cen_con">
-								<h2 class="text-uppercase">Del Huila para Colombia</h2>
-								<p>Los mejores productos del Huila</p>
-								<a class="primary-btn cta-btn" href="#">Productos</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+		<div>
+			<section id="intro">
+			<section id="contenedor">
+					<section id="mainslider" class="flexslider">
+				<ul class="slides">
+						<li data-thumb="img/fondo.jpg">
+						<a href="#"><img id="imagen" src="img/fondo.jpg" alt="" /></a>
+						<section class="flex-caption primary">
+							<h2>MIRADOR TEJADO</h2>
+							<p>"Agrado-Huila"</p>
+						</section>
+						</li>
+						<li data-thumb="img/fondo2.png">
+						<a href="#"><img id="imagen" src="img/fondo2.png" alt="" /></a>
+						<section class="flex-caption warning">
+							<h2> BUENOS AIRES</h2>
+							<p>"Finca cafetera Oporapa-Huila"</p>
+						</section>
+						</li>
+						<li data-thumb="img/fondo3.jpeg">
+						<a href="#"><img id="imagen" src="img/fondo3.jpeg" alt="" /></a>
+						<section class="flex-caption success">
+							<h2>PALMARITO</h2>
+							<p>"Finca cafetera Palmarito-Pitalito"</p>
+						</section>
+						</li>
+				
+					</ul>
+			
+				</section>
+			</section>
+			</section>
 		</div>
 		<!-- /HOT DEAL SECTION -->
 
@@ -645,6 +665,9 @@ if(isset($_SESSION['usuario']) and isset($_SESSION['apellido'])){
 				</div>
 			</div>
 		</div>
+		<br>
+			<center><a class="primary-btn cta-btn2" href="#">Ver más</a></center>
+		<br>
 		<!-- /SECTION -->
 		
 		<!-- SECTION -->
@@ -852,248 +875,265 @@ if(isset($_SESSION['usuario']) and isset($_SESSION['apellido'])){
 		</div>  -->
 		<!-- /HOT DEAL SECTION -->
 
-		<!-- SECTION -->
-		<div class="section">
+		<br>
+<br>
+		<!-- /SECTION -->
+
+		<div>
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4 col-xs-6">
+
+					<div class="col-md-12">
 						<div class="section-title">
-							<h4 class="title">PRODUCTOS</h4>
-							<div class="section-nav">
-								<div id="slick-nav-3" class="products-slick-nav"></div>
-							</div>
-						</div>
-						<div class="products-widget-slick" data-nav="#slick-nav-3">
-							<div>
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="./img/product07.jpg" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">PISCICULTURA</p>
-										<h3 class="product-name"><a href="#">PECES</a></h3>
-										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-									</div>
-								</div>
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="./img/product08.png" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">CHOLUPA</p>
-										<h3 class="product-name"><a href="#">CHOLUPA</a></h3>
-										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-									</div>
-								</div>
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="./img/product09.jpg" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">CAFE</p>
-										<h3 class="product-name"><a href="#">CAFE EXPRESS</a></h3>
-										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-									</div>
-								</div>
-							</div>
-							<div>
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="./img/product01.png" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">PANELA</p>
-										<h3 class="product-name"><a href="#">PANELA </a></h3>
-										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-									</div>
-								</div>
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="./img/product02.jpg" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">OVINOS</p>
-										<h3 class="product-name"><a href="#">OVEJAS </a></h3>
-										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-									</div>
-								</div>
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="./img/product03.png" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">GANADERIA</p>
-										<h3 class="product-name"><a href="#">VACA</a></h3>
-										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-									</div>
-								</div>
-							</div>
+							<h3 class="title"><strong>CATEGORIA TEGNOLOGIA</strong></h3>
+							
 						</div>
 					</div>
-					<div class="col-md-4 col-xs-6">
-						<div class="section-title">
-							<h4 class="title">PRIDUCTOS</h4>
-							<div class="section-nav">
-								<div id="slick-nav-4" class="products-slick-nav"></div>
-							</div>
-						</div>
-						<div class="products-widget-slick" data-nav="#slick-nav-4">
-							<div>
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="./img/product04.jpg" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">CACAO</p>
-										<h3 class="product-name"><a href="#">CACAO</a></h3>
-										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-									</div>
-								</div>
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="./img/product05.webp" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">PANELA</p>
-										<h3 class="product-name"><a href="#">PANELA</a></h3>
-										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-									</div>
-								</div>
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="./img/product06.png" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">CAFE</p>
-										<h3 class="product-name"><a href="#">CAFE</a></h3>
-										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-									</div>
-								</div>
-							</div>
-							<div>
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="./img/product07.jpg" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">PISCICULTURA</p>
-										<h3 class="product-name"><a href="#">PECES</a></h3>
-										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-									</div>
-								</div>
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="./img/product08.png" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">CHOLUPA</p>
-										<h3 class="product-name"><a href="#">CHOLUPA</a></h3>
-										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-									</div>
-								</div>
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="./img/product09.jpg" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">CAFE</p>
-										<h3 class="product-name"><a href="#">CAFE</a></h3>
-										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="clearfix visible-sm visible-xs"></div>
-					<div class="col-md-4 col-xs-6">
-						<div class="section-title">
-							<h4 class="title">PRODUCTOS</h4>
-							<div class="section-nav">
-								<div id="slick-nav-5" class="products-slick-nav"></div>
-							</div>
-						</div>
-						<div class="products-widget-slick" data-nav="#slick-nav-5">
-							<div>
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="./img/product01.png" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">PANELA</p>
-										<h3 class="product-name"><a href="#">PANELA</a></h3>
-										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-									</div>
-								</div>
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="./img/product12.jpg" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">ARTESANIA</p>
-										<h3 class="product-name"><a href="#">ESTATUAS</a></h3>
-										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-									</div>
-								</div>
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="./img/product03.png" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">GANADERIA</p>
-										<h3 class="product-name"><a href="#">GANADERIA</a></h3>
-										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-									</div>
-								</div>
-							</div>
-							<div>
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="./img/product11.jpg" alt="" style="width: 110%">
-									</div>
-									<div class="product-body">
-										<p class="product-category">ARTESANIA</p>
-										<h3 class="product-name"><a href="#">CHIVA</a></h3>
-										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-									</div>
-								</div>
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="./img/product05.webp" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">PANELA</p>
-										<h3 class="product-name"><a href="#">PANELA</a></h3>
-										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-									</div>
-								</div>
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="./img/product10.jpg" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">ATESANIAS</p>
-										<h3 class="product-name"><a href="#">SOMBRERO</a></h3>
-										<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
-									</div>
-								</div>
-							</div>
+
+					<div class="col-md-12">
+						<div class="row">
+							<div class="products-tabs">
+								<div id="tab2" class="tab-pane fade in active">
+									<div class="products-slick" data-nav="#slick-nav-2">
+
+										<div class="product">
+											<div class="product-img">
+												<a href="Login.php"><img src="./img/shop01.png" alt="" style="width: 100%"></a>
+												<div class="product-label">
+												</div>
+											</div>
+											<div class="product-body">
+												<p class="product-category">TECNOLOGIA</p>
+												<h3 class="title">COMPUTADORES</h3>
+												<BR>
+												
+												<div class="product-btns">
+												</div>
+											</div>
+										</div>
+
+										<div class="product">
+											<div class="product-img">
+												<a href="#"><img src="./img/shop02.png" alt="" style="width: 100%"></a>
+												<div class="product-label">
+												</div>
+											</div>
+											<div class="product-body">
+												<p class="product-category">TECNOLOGIA</p>
+												<h3 class="title">CAMARAS</h3>
+												<BR>
+												
+												<div class="product-btns">
+												</div>
+											</div>
+										</div>
+
+
+										<div class="product">
+											<div class="product-img">
+												<a href="#"><img src="./img/shop03.png" alt="" style="width: 100%"></a>
+												<div class="product-label">
+												</div>
+											</div>
+											<div class="product-body">
+												<p class="product-category">TECNOLOGIA</p>
+												<h3 class="title">AUDIFONOS</h3>
+												<BR>
+												
+												<div class="product-btns">
+												</div>
+											</div>
+										</div>
+										<div class="product">
+											<div class="product-img">
+												<a href="#"><img src="./img/celular.png" alt="" style="width: 100%; height: 175px;"></a>
+												<div class="product-label">
+												</div>
+											</div>
+											<div class="product-body">
+												<p class="product-category">TECNOLOGIA</p>
+												<h3 class="title">CELUARES</h3>
+												<BR>
+												<div class="product-btns">
+												</div>
+											</div>
+										</div>
+
+
+										<div class="product">
+											<div class="product-img">
+												<a href="#"><img src="./img/tablet.png" alt="" style="width: 100%; height: 175px;"></a>
+												<div class="product-label">
+												</div>
+											</div>
+											<div class="product-body">
+												<p class="product-category">TECNOLOGIA</p>
+												<h3 class="title">TABLETS</h3>
+												<BR>
+												<div class="product-btns">
+												</div>
+											</div>
+										</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+	</BR>
+</div>
+</div>
+</div>
+<div class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="section-title">
+							<h3 class="title"><strong>CATEGORIA ROPA</strong></h3>
+							
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="row">
+							<div class="products-tabs">
+								<div id="tab2" class="tab-pane fade in active">
+									<div class="products-slick" data-nav="#slick-nav-2">
+										<div class="product">
+											<div class="product-img">
+												<a href="Login.php"><img src="./img/banner04.png" alt="" style="width: 100%; height: 175px;"></a>
+												<div class="product-label">
+												</div>
+											</div>
+											<div class="product-body">
+												<p class="product-category">ROPA</p>
+												<h3 class="title">DAMAS</h3>
+												<BR>
+												
+												<div class="product-btns">
+												</div>
+											</div>
+										</div>
+
+										<div class="product">
+											<div class="product-img">
+												<a href="#"><img src="./img/banner01..png" alt="" style="width: 100%; height: 176px;"></a>
+												<div class="product-label">
+												</div>
+											</div>
+											<div class="product-body">
+												<p class="product-category">ROPA</p>
+												<h3 class="title">CABALLEROS</h3>
+												<BR>
+												
+												<div class="product-btns">
+												</div>
+											</div>
+										</div>
+
+
+										<div class="product">
+											<div class="product-img">
+												<a href="#"><img src="./img/niño.png" alt="" style="width: 100%; height: 175px"></a>
+												<div class="product-label">
+												</div>
+											</div>
+											<div class="product-body">
+												<p class="product-category">ROPA</p>
+												<h3 class="title">NIÑOS</h3>
+												<BR>
+												
+												<div class="product-btns">
+												</div>
+											</div>
+										</div>
+										<div class="product">
+											<div class="product-img">
+												<a href="#"><img src="./img/niña.png" alt="" style="width: 100%; height: 175px;"></a>
+												<div class="product-label">
+												</div>
+											</div>
+											<div class="product-body">
+												<p class="product-category">ROPA</p>
+												<h3 class="title">NIÑAS</h3>
+												<BR>
+												<div class="product-btns">
+												</div>
+											</div>
+										</div>
+										<div class="product">
+											<div class="product-img">
+												<a href="#"><img src="./img/bebe.png" alt="" style="width: 100%; height: 175px;"></a>
+												<div class="product-label">
+												</div>
+											</div>
+											<div class="product-body">
+												<p class="product-category">ROPA</p>
+												<h3 class="title">BEBES</h3>
+												<BR>
+												<div class="product-btns">
+												</div>
+											</div>
+										</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</BR>
+</div>
+</div>
+</div>
+
+
 		<!-- /SECTION -->
+
+				<!-- /SECTION -->
+
+
+		<!-- /SECTION -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		
 
 
-		<div class="section">
+		<center><div class="section">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4 col-xs-6">
 						<div class="logos">
 							<div class="shop-img">
-								<img src="./img/ghuila.png" alt="" style="width: 60%">
+								<img src="./img/ghuila.png" alt="" style="width: 35%">
 							</div>
 							<div class="shop-body">
 								
@@ -1105,7 +1145,7 @@ if(isset($_SESSION['usuario']) and isset($_SESSION['apellido'])){
 					<div class="col-md-4 col-xs-6">
 						<div class="logos">
 							<div class="shop-img">
-								<img src="./img/ccneiva.png" alt="" style="width: 60%">
+								<img src="./img/ccneiva.png" alt="" style="width: 35%">
 							</div>
 							<div class="shop-body">
 								
@@ -1117,7 +1157,7 @@ if(isset($_SESSION['usuario']) and isset($_SESSION['apellido'])){
 					<div class="col-md-4 col-xs-6">
 						<div class="logos">
 							<div class="shop-img">
-								<img src="./img/hcrece.jpeg" alt="" style="width: 60%">
+								<img src="./img/hcrece.jpeg" alt="" style="width: 35%">
 							</div>
 							<div class="shop-body">
 								
@@ -1128,7 +1168,8 @@ if(isset($_SESSION['usuario']) and isset($_SESSION['apellido'])){
 					
 				</div>
 			</div>
-		</div>
+		</div></center>
+
 
 
 		<!-- NEWSLETTER -->
@@ -1248,5 +1289,12 @@ if(isset($_SESSION['usuario']) and isset($_SESSION['apellido'])){
 		<script src="js/nouislider.min.js"></script>
 		<script src="js/jquery.zoom.min.js"></script>
 		<script src="js/main.js"></script>
-	</body>
+  		<script src="js/jquery.prettyPhoto.js"></script>
+  		<script src="js/jquery.flexslider.js"></script>
+  		<script src="js/jquery-hover-effect.js"></script>
+
+
+  <!-- Template Custom JavaScript File -->
+		  <script src="js/custom.js"></script>
+</body>
 </html>

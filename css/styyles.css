@@ -1,0 +1,119 @@
+
+
+
+
+/* -------------------------------------------------- */
+/* Sliders
+/* -------------------------------------------------- */
+
+/* iview slider */
+
+/* ================ */
+
+/* main content */
+
+
+
+/* divider */
+
+
+/* --------------------------------------------------*/
+/* Widgets
+/* -------------------------------------------------- */
+/* Flickr Photo */
+
+
+.flexslider {
+	margin-bottom:20px;
+}
+
+
+
+
+ 
+
+/* breadcrumb */
+#subintro .breadcrumb {
+	margin:30px 0 0;
+	background:none;
+}
+
+#subintro ul.breadcrumb li {
+	margin-bottom:0;
+	padding-bottom:0;
+	color:#fff;
+	font-style:italic;
+}
+
+#subintro ul.breadcrumb li a {
+	color:#fff;
+}
+
+#subintro ul.breadcrumb li a:hover {
+	color:#ddd;
+}
+
+#subintro ul.breadcrumb li a:hover {
+	text-decoration:none;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+.breadcrumb > li {
+
+}
+
+.breadcrumb.custom {
+  padding: 8px 0px;
+  margin: 0 0 20px ;
+  list-style: none;
+  background-color: #fff;
+  border:none;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.breadcrumb > li {
+  display: inline-block;
+  *display: inline;
+  line-height:1.6em;
+  *zoom: 1;
+}
+
+.breadcrumb > li > .divider {
+  padding: 0 5px;
+  color: #ccc;
+}
+
+
+/* search form on inner pages */
+#subintro .search {
+	margin:30px 0 0;
+	padding:0;
+	float:right;
+}
+
+#subintro .search input {
+	border:none;
+	font-size:13px;
+
+}
+
+#subintro .search button {
+	border:none;
+	font-size:13px;
+	background:#353535;
+	color:#fff;
+	text-shadow:none;
+}
+
+/* demo buttons page */
+.demo a.btn {
+	margin:0 10px 10px 0;
+}
+
+/* 404 */
+
+h2.error {
+	font-size:78px;
+}

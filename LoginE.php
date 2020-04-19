@@ -14,18 +14,18 @@ if (!empty($_POST)) { // Si se da click en el botón Ingresar
 		<script type="text/javascript"> window.alert("Campos obligatorios!!")</script>
 		<?php
 	}else{
-		$sql= "SELECT * FROM `reg_usuario` WHERE correoUsu=:user AND claveUsu=:pass";
+		$sql= "SELECT * FROM `reg_empresa` WHERE documento_cedulaEmp=:user AND claveEmp=:pass";
 		$result= $base-> prepare($sql);
 		$result-> execute(array(":user"=>$_POST['usuario'], ":pass"=>$_POST{'password'}));
 
 		while ($consulta=$result->fetch(PDO::FETCH_ASSOC)){
-			$_SESSION['usuario']=$consulta['nombreUsu'];// Se crea una variable de sesión a la que se le asigna el nombre "usuario"
-			$_SESSION['apellido']=$consulta['priApellidoUsu'];
+			$_SESSION['empresa']=$consulta['nombreEmp'];// Se crea una variable de sesión a la que se le asigna el nombre "usuario"
+
 		}
 		$verificar=$result->rowCount(); // Retorna un número diferente a 0 si la sentencia se ha ejecutado correctamente y lo almacena en $contador...
 
 			if ($verificar > 0) { // Es > a 0 si se ha ejecutado la sentecia correctamente 
-				header("location:Registrados.php");
+				header("location:Empresa.php");
 			}else{
 				// Si es <= 0 quiere decir que la sentencia no se ejecutó...
 				?>
@@ -34,33 +34,6 @@ if (!empty($_POST)) { // Si se da click en el botón Ingresar
 			
 		}
 		}
-
-		if (empty($_POST['usuario']) || empty($_POST['password'])) {
-			//Si alguno de los campos está en blanco...
-			?>
-			<script type="text/javascript"> window.alert("Campos obligatorios!!")</script>
-			<?php
-		}else{
-			$sql= "SELECT * FROM `reg_empresa` WHERE documento_cedulaEmp=:user AND claveEmp=:pass";
-			$result= $base-> prepare($sql);
-			$result-> execute(array(":user"=>$_POST['usuario'], ":pass"=>$_POST{'password'}));
-	
-			while ($consulta=$result->fetch(PDO::FETCH_ASSOC)){
-				$_SESSION['empresa']=$consulta['nombreEmp'];// Se crea una variable de sesión a la que se le asigna el nombre "usuario"
-	
-			}
-			$verificar=$result->rowCount(); // Retorna un número diferente a 0 si la sentencia se ha ejecutado correctamente y lo almacena en $contador...
-	
-				if ($verificar > 0) { // Es > a 0 si se ha ejecutado la sentecia correctamente 
-					header("location:Empresa.php");
-				}else{
-					// Si es <= 0 quiere decir que la sentencia no se ejecutó...
-					?>
-					<script type="text/javascript"> window.alert("Datos Erróneos!!")</script>
-				<?php
-				
-			}
-			}
 
 	}
 
@@ -96,8 +69,6 @@ if (!empty($_POST)) { // Si se da click en el botón Ingresar
 
 		<!-- Custom stlylesheet -->
 		<link type="text/css" rel="stylesheet" href="css/style.css"/>
-
-		<link type="text/css" rel="stylesheet" href="css/styyles.css"/>
     </head>
 	<body>
 
@@ -106,18 +77,15 @@ if (!empty($_POST)) { // Si se da click en el botón Ingresar
 			<div id="header">
 				<div class="container">
 					<div class="row">		
-						<div class="col-md-3">
+						<div class="col-md-3"  style="align: center">
 							<div class="header-logo">
-								<a href="index.php" class="logo">
+								<a href="#" class="logo">
 									<center><img src="img/logo.png" alt=""></center>
 								</a>
 							</div>
 						</div>
-						<div class="col-md-6">
-							<div class="header-search">
-								
-							</div>
-						</div>
+						
+						<!--
 						<div class="col-md-3 clearfix">
 							<div class="header-ctn">
 								<div class="dropdown">
@@ -127,15 +95,25 @@ if (!empty($_POST)) { // Si se da click en el botón Ingresar
 									</a>
 									<div class="cart-dropdown2">
 										<ul class="custom-menu2">
-										
-											<li><a href="Rempresa.php"><i class="fa fa-building"></i>Empresa</a></li>
-											<li><a href="Rususario.php"><i class="fa fa-user-plus"></i>usuario</a></li>
-										
+											<li><a href="#"><i class="fa fa-user-o"></i> Mi cuenta</a></li>
+											<li><a href="#"><i class="fa fa-heart-o"></i>Favoritos</a></li>
+											<li><a href="#"><i class="fa fa-exchange"></i> Comparar</a></li>
+											<li><a href="#"><i class="fa fa-check"></i> Compra</a></li>
+											<li><a href="#"><i class="fa fa-unlock-alt"></i>Login</a></li>
+											<li><a href="#"><i class="fa fa-user-plus"></i>Crear cuenta</a></li>
 										</ul>
 									</div>
+								</div> 
+								
+								<div class="menu-toggle">
+									<a href="#">
+										<i class="fa fa-bars"></i>
+										<span>Menu</span>
+									</a>
 								</div>
 							</div>
 						</div>
+						-->
 					</div>
 				</div>
 			</div>
@@ -200,13 +178,13 @@ if (!empty($_POST)) { // Si se da click en el botón Ingresar
 												<h2 style="color: #FF5A16">LOGIN</h2>
 												<input type="text" name="usuario" class="input" placeholder="Usuario" style="width:">
 												<input type="password" name="password" class="input" placeholder="Contraseña" style="width: ">
-												<input style="background: #FF5A16; color: white; " type="submit" name="btn" value="Login">
+												<input style="background: #FF5A16; color: white" type="submit" name="btn" value="Login">
 												<a href="" style="width: 200%; margin-left: -20px; font-size: 13px;">¿Olvidaste tu contraseña?</a>
 												<div class="opciones" style="    width: 200%; margin-left: -20px; font-size: 13px;">
 												
 												<br>
 												<br>
-												<a href="" title="Selecciona el tipo de cuenta en el ícono superior 'Cuenta'">¿No tienes una cuenta?</a>
+												<a href="Rempresa.php">¿No tienes una cuenta? Regístrate</a>
 												</div>
 											</div>
 										</div>

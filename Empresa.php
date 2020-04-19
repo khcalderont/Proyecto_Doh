@@ -7,8 +7,6 @@
 
 		<title>DondeHay.co</title>
 
-		
-
 		<!-- Google font -->
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
 
@@ -30,9 +28,20 @@
 
 		<link type="text/css" rel="stylesheet" href="css/flexslider.css"/>
 		<link type="text/css" rel="stylesheet" href="css/styyles.css"/>
-    </head>
-	<body>
+	</head>
 
+	<?php
+require 'funcs/conexion.php'; // Conexión a la BD
+session_start();
+
+if(isset($_SESSION['empresa'])){
+	$empresa=$_SESSION['empresa'];
+} else{
+	$empresa="";
+}
+?>
+
+	<body>
 		<!-- HEADER -->
 		<header>
 			<div id="header">
@@ -56,13 +65,29 @@
 						<div class="col-md-3 clearfix">
 							<div class="header-ctn">
 								<div class="dropdown">
-									<a href="Login.php" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+									<a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
 										<i class="fa fa-user-circle-o"></i>
-										<a href="Login.php"><span>Ingresar</span></a>
+										<span>
+											<?php
+												if($empresa==""){
+													echo"<script> window.location='LoginE.php' </script>";
+												} else{
+													echo  $_SESSION['empresa'];
+										
+												}
+											?>
+										</span>
 									</a>
-
+									<div class="cart-dropdown2">
+										<ul class="custom-menu2">
+											<li><a href="#"><i class="fa fa-user-o"></i> Mi cuenta</a></li>
+											<li><a href="#"><i class="fa fa-heart-o"></i>Crear Productos</a></li>
+											<li><a href="#"><i class="fa fa-exchange"></i> Ventas</a></li>
+											<li><a href="#"><i class="fa fa-envelope"></i> Mensajes</a></li>
+											<li><a href="SalirE.php"><i class="fa fa-power-off"></i>Cerrar Sesión</a></li>
+										</ul>
+									</div>
 								</div>
-								<!--
 								<div class="dropdown">
 									<a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
 										<i class="fa fa-shopping-cart"></i>
@@ -102,7 +127,6 @@
 										</div>
 									</div>
 								</div>
-								-->
 								<div class="menu-toggle">
 									<a href="#">
 										<i class="fa fa-bars"></i>
@@ -117,11 +141,8 @@
 		</header>
 		<!-- /HEADER -->
 
-
-
-
-		<!-- NAVIGATION -->
-		<div id="navigation">
+<!-- NAVIGATION -->
+<div id="navigation">
 			<!-- container -->
 			<div class="container">
 				<div id="responsive-nav">

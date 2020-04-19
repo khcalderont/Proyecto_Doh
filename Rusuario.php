@@ -465,7 +465,7 @@ if (!empty($_POST)) {
 						<center><div>
 							<div class="billing-details">
 							<div class="section-title">
-								<h2 style="color: #fd6500;">REGISTRO DE USUARIO</h2>
+								<p class="tituloregistro" style="color: #FF5A16;"><strong>REGISTRO DE USUARIOS</strong></p>
 							</div>
 							<br>
 							<br>
@@ -561,7 +561,7 @@ if (!empty($_POST)) {
 								<br>
 								<br>
 								<tr>
-									<td><b><input class="input" type="submit" name="btn" value="REGISTRAR" style="background-color: #dc6414; color: white; border-radius: 10px; width: 300px; height: 60px; font-size: 20px; border-color: #dc6414"></b></td>
+								<td><b><input class="input" type="submit" name="btn" value="REGISTRAR" style="background-color: #FF5A16; color: white; border-radius: 10px; width: 130px; height: 35px; font-size: 18px; border-color: #dc6414"></b></td>
 									
 								</tr>
 								
