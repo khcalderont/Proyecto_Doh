@@ -502,7 +502,7 @@
 									<div class="products-slick" data-nav="#slick-nav-1">
 										<div class="product">
 											<div class="product-img">
-												<img src="./img/nuevo1.jpeg" alt="" style="width:105%">
+												<img src="./img/nuevo1.jpeg" alt="" style="width:">
 												<div class="product-label">
 													<span class="sale">-30%</span>
 													<span class="new">NEW</span>
@@ -559,7 +559,7 @@
 										</div>
 										<div class="product">
 											<div class="product-img">
-												<img src="./img/nuevo3.jpg" alt="" style="width:112%">
+												<img src="./img/nuevo3.jpg" alt="" style="width:">
 												<div class="product-label">
 													<span class="sale">-30%</span>
 												</div>
@@ -582,7 +582,7 @@
 										</div>
 										<div class="product">
 											<div class="product-img">
-												<img src="./img/nuevo4.jpg" alt="" style="width:100%; padding-left: 30px">
+												<img src="./img/nuevo4.jpg" alt="" style="width:; padding-left: ">
 											</div>
 											<div class="product-body">
 												<p class="product-category">Categoria</p>
@@ -607,7 +607,7 @@
 										</div>
 										<div class="product">
 											<div class="product-img">
-												<img src="./img/nuevo.jpg" alt="" style="width:90%">
+												<img src="./img/nuevo.jpg" alt="" style="width:">
 											</div>
 											<div class="product-body">
 												<p class="product-category">Categoria</p>
